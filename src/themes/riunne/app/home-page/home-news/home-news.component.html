@@ -1,0 +1,23 @@
+<div class="background-image-container mt-ncs">
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">         
+                <div class="head-title">
+                    <h1 class="display-5">Repositorio Institucional UNNE</h1>
+                    <p class="lead">Acceso Abierto a toda la producción científico-tecnológica de la Universidad
+                        Nacional del Nordeste
+                    </p>
+                </div>          
+            <ds-themed-search-form [inPlaceSearch]="false"
+                [searchPlaceholder]="'home.search-form.placeholder' | translate"></ds-themed-search-form>
+        </div>
+    </div>
+    
+    <picture class="background-image">
+        <source type="image/webp"
+            srcset="assets/dspace/images/banner.webp 2000w, assets/dspace/images/banner-half.webp 1200w, assets/dspace/images/banner-tall.webp 768w">
+        <source type="image/jpg"
+            srcset="assets/dspace/images/banner.jpg 2000w, assets/dspace/images/banner-half.jpg 1200w, assets/dspace/images/banner-tall.jpg 768w">
+        <img alt=""
+            [src]="'assets/dspace/images/banner.jpg'" /><!-- without the []="''" Firefox downloads both the fallback and the resolved image -->
+    </picture>
+</div>
