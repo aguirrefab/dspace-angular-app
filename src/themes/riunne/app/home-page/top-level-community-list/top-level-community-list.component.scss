@@ -1,0 +1,25 @@
+.comunidades {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  background-color: bisque;
+  color: black;
+  width: 150px;
+  height: 150px;
+}
+
+@media screen and (min-width: map-get($grid-breakpoints, md)) {
+  .list-comunity {
+    display: none;
+  }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, md)) {
+  .comunidades {
+    display: none;
+  }
+}
