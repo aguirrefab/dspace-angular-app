@@ -6,7 +6,7 @@ debug: false
 # "ui" settings usually specify a localhost port/URL which is later proxied to a public URL (using Apache or similar)
 ui:
   ssl: false
-  host: 10.60.80.250
+  host: localhost
   port: 4000
   # NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
   nameSpace: /
@@ -21,10 +21,9 @@ ui:
 # NOTE: these settings define which (publicly available) REST API to use. They are usually
 # 'synced' with the 'dspace.server.url' setting in your backend's local.cfg.
 rest:
-  ssl: false
-  host: 10.60.80.250
-  port: 8080
-  # NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
+  ssl: true
+  host: sandbox.dspace.org
+  port: 443
   nameSpace: /server
 
 # Caching settings
@@ -270,7 +269,7 @@ homePage:
   topLevelCommunityList:
     # No. of communities to list per page on the home page
     # This will always round to the nearest number from the list of page sizes. e.g. if you set it to 7 it'll use 10
-    pageSize: 5
+    pageSize: 25
 
 # Item Config
 item:
@@ -357,8 +356,8 @@ bundle:
 # For images, this enables a gallery viewer where you can zoom or page through images.
 # For videos, this enables embedded video streaming
 mediaViewer:
-  image: false
-  video: false
+  image: true
+  video: true
 
 # Whether the end user agreement is required before users use the repository.
 # If enabled, the user will be required to accept the agreement before they can use the repository.

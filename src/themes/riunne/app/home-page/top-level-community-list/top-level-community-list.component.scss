@@ -1,25 +1,34 @@
-.comunidades {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.grid-communities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 10px;
 }
 
-.card {
-  background-color: bisque;
-  color: black;
-  width: 150px;
-  height: 150px;
+.grid-communities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.community-card {
+  background-color: #747bff1a;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 300px;
+    text-align: center;  
 }
 
 @media screen and (min-width: map-get($grid-breakpoints, md)) {
-  .list-comunity {
+  .list-communities {
     display: none;
   }
 }
 
 @media screen and (max-width: map-get($grid-breakpoints, md)) {
-  .comunidades {
+  .grid-communities {
     display: none;
   }
 }

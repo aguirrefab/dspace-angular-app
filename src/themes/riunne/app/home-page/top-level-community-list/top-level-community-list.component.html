@@ -1,6 +1,6 @@
 <ng-container *ngIf="communitiesRD$ | async as communitiesRD">
   <div *ngIf="communitiesRD?.hasSucceeded">
-    <div class="list-comunity">
+    <div class="list-communities">
       <ds-viewable-collection
         [config]="config"
         [sortConfig]="sortConfig"
@@ -13,13 +13,25 @@
       </ds-viewable-collection>
     </div>
 
-    <div class="comunidades">
-      <div class="card" *ngFor="let community of communitiesRD.payload.page">
-        <!-- Aquí puedes acceder a las propiedades de cada objeto Community -->
-        <h2>{{ community.name }}</h2>
-        <p>{{ community. }}</p>
-        <!-- Aquí puedes mostrar más propiedades según tus necesidades -->
-      </div>
+    <div class="grid-communities">
+      <ul   *ngFor="let community of communitiesRD.payload.page">
+    
+                <li>
+                  <div class="community-card">
+                    <a href="{{ community.metadata['dc.identifier.uri'][0]?.value }}">
+                      <h3>{{ community._name }}</h3>
+                    </a>
+                    <img src="{{ community._links.logo.href }}" alt="{{ community._name }}" />
+                    <!-- Community logo -->
+                    <div class="dso-logo mb-3">
+                      <img [src]="community._links.logo.href" class="img-fluid" [attr.alt]="alternateText ? alternateText : null"
+                        (error)="errorHandler($event)" />
+                    </div>
+
+                  </div>
+                </li>
+            
+      </ul>
     </div>
   </div>
   <ds-error
