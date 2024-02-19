@@ -12,26 +12,11 @@
       >
       </ds-viewable-collection>
     </div>
-
-    <div class="grid-communities">
-      <ul   *ngFor="let community of communitiesRD.payload.page">
-    
-                <li>
-                  <div class="community-card">
-                    <a href="{{ community.metadata['dc.identifier.uri'][0]?.value }}">
-                      <h3>{{ community._name }}</h3>
-                    </a>
-                    <img src="{{ community._links.logo.href }}" alt="{{ community._name }}" />
-                    <!-- Community logo -->
-                    <div class="dso-logo mb-3">
-                      <img [src]="community._links.logo.href" class="img-fluid" [attr.alt]="alternateText ? alternateText : null"
-                        (error)="errorHandler($event)" />
-                    </div>
-
-                  </div>
-                </li>
-            
-      </ul>
+    <div class="grid-communities"> 
+      <div class="my-4" *ngFor="let item of communitiesRD?.payload?.page">
+        <ds-ri-community-card [object]="item" [viewMode]="viewMode" >
+        </ds-ri-community-card>
+      </div>
     </div>
   </div>
   <ds-error

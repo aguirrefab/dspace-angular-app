@@ -40,6 +40,8 @@ import { PersonComponent } from './app/entity-groups/research-entities/item-page
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
 import { ComcolPageLogoComponent } from './app/shared/comcol-page-logo/comcol-page-logo.component';
 import { ComcolModule } from 'src/app/shared/comcol/comcol.module';
+import { RiCommunityCardComponent } from './app/ri-community-card/ri-community-card.component';
+
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
@@ -80,6 +82,7 @@ const DECLARATIONS = [
   EditItemSelectorComponent,
   LogInComponent,
   LangSwitchComponent,
+  RiCommunityCardComponent,
 ];
 
 @NgModule({
