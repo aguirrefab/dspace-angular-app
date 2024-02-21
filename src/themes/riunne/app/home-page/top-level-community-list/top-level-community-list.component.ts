@@ -13,4 +13,5 @@ import { ViewMode } from 'src/app/core/shared/view-mode.model';
 })
 export class TopLevelCommunityListComponent extends BaseComponent {
   viewMode = ViewMode.GridElement;
+  Bitstream = 'Bitstream';
 }

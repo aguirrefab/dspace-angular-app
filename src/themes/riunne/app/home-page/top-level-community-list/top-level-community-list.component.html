@@ -12,11 +12,18 @@
       >
       </ds-viewable-collection>
     </div>
-    <div class="grid-communities"> 
+
+    <div class="grid-communities">
       <div class="my-4" *ngFor="let item of communitiesRD?.payload?.page">
-        <ds-ri-community-card [object]="item" [viewMode]="viewMode" >
+        <ds-ri-community-card [object]="item" [viewMode]="viewMode">
         </ds-ri-community-card>
+        <span
+          class="badge badge-pill badge-secondary align-top archived-items-lead"
+          >{{ item.archivedItemsCount }}</span
+        >
       </div>
+      <!-- <ds-ri-community-card [community]="item"> </ds-ri-community-card>
+      <p>{{ communitiesRD?.payload?.page[0] | json }}</p> -->
     </div>
   </div>
   <ds-error

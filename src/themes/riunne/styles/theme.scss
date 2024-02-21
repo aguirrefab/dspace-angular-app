@@ -1,12 +1,42 @@
 // This file combines the other scss files in to one. You usually shouldn't edit this file directly
 
-@import './_theme_sass_variable_overrides.scss';
-@import '../../../styles/_variables.scss';
-@import '../../../styles/_mixins.scss';
-@import '../../../styles/helpers/font_awesome_imports.scss';
-@import '../../../styles/_vendor.scss';
-@import '../../../styles/_custom_variables.scss';
-@import './_theme_css_variable_overrides.scss';
-@import '../../../styles/bootstrap_variables_mapping.scss';
-@import '../../../styles/_truncatable-part.component.scss';
-@import './_global-styles.scss';
+@import "./_theme_sass_variable_overrides.scss";
+@import "../../../styles/_variables.scss";
+@import "../../../styles/_mixins.scss";
+@import "../../../styles/helpers/font_awesome_imports.scss";
+@import "../../../styles/_vendor.scss";
+@import "../../../styles/_custom_variables.scss";
+@import "./_theme_css_variable_overrides.scss";
+@import "../../../styles/bootstrap_variables_mapping.scss";
+@import "../../../styles/_truncatable-part.component.scss";
+@import "./_global-styles.scss";
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  background-clip: border-box;
+  border: 0.1rem solid $ri-primary;
+  border-radius: 0.75rem;
+  height: 400px;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 0rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.card-title {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.mb-4,
+.my-4 {
+  margin-bottom: 0rem !important;
+}
