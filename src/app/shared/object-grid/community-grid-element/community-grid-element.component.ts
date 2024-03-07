@@ -7,23 +7,22 @@ import { followLink } from '../../utils/follow-link-config.model';
 import { LinkService } from '../../../core/cache/builders/link.service';
 import { hasNoValue, hasValue } from '../../empty.util';
 import { DSONameService } from '../../../core/breadcrumbs/dso-name.service';
-
+import { DescriptionOutlined } from '@material-ui/icons';
 /**
  * Component representing a grid element for a community
  */
 @Component({
   selector: 'ds-community-grid-element',
   styleUrls: ['./community-grid-element.component.scss'],
-  templateUrl: './community-grid-element.component.html'
+  templateUrl: './community-grid-element.component.html',
 })
-
 @listableObjectComponent(Community, ViewMode.GridElement)
 export class CommunityGridElementComponent extends AbstractListableElementComponent<Community> {
   private _object: Community;
 
   constructor(
     public dsoNameService: DSONameService,
-    private linkService: LinkService,
+    private linkService: LinkService
   ) {
     super(dsoNameService);
   }
