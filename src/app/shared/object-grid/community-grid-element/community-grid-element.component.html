@@ -1,4 +1,4 @@
-<div>
+<div class="cm-card">
   <a
     *ngIf="linkType != linkTypes.None"
     [target]="linkType == linkTypes.ExternalLink ? '_blank' : '_self'"
@@ -44,7 +44,9 @@
       "
       [routerLink]="['/communities/', object.id]"
     >
-      <h4 class="card-title">{{ dsoNameService.getName(object) }}</h4>
+      <h4 class="card-title hover-zoom">
+        {{ dsoNameService.getName(object) }}
+      </h4>
     </a>
   </div>
   <div class="button-card-community">

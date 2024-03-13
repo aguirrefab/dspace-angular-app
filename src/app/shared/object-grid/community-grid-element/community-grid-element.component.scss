@@ -8,3 +8,14 @@
 .button-card-community > * {
   margin-right: 10px; /* Adjust the value as needed */
 }
+
+.cm-card {
+  transition: box-shadow 0.3s ease; /* Transición suave del efecto */
+  margin: 5px;
+}
+
+.cm-card:hover {
+  /* Efecto de sombra con desenfoque solo en los lados */
+  box-shadow: -5px 0px 10px -5px #212529,
+    /* Sombra a la izquierda */ 5px 0px 10px -5px #212529; /* Sombra a la derecha */
+}

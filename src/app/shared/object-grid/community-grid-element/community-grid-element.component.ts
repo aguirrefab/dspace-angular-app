@@ -7,7 +7,6 @@ import { followLink } from '../../utils/follow-link-config.model';
 import { LinkService } from '../../../core/cache/builders/link.service';
 import { hasNoValue, hasValue } from '../../empty.util';
 import { DSONameService } from '../../../core/breadcrumbs/dso-name.service';
-import { DescriptionOutlined } from '@material-ui/icons';
 /**
  * Component representing a grid element for a community
  */
