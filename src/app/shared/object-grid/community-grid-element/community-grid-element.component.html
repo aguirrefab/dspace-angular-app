@@ -50,11 +50,33 @@
     </a>
   </div>
   <div class="button-card-community">
-    <button class="lead btn btn-primary viewButton">
-      <i class="fas fa-book" aria-hidden="true"></i>
-      {{ object.archivedItemsCount }}
-    </button>
-    <button class="lead btn btn-primary viewButton">
+    <a
+      [target]="linkType == linkTypes.ExternalLink ? '_blank' : '_self'"
+      [attr.rel]="
+        linkType == linkTypes.ExternalLink ? 'noopener noreferrer' : null
+      "
+      [routerLink]="['/browse/title']"
+      [queryParams]="{ scope: object.id }"
+    >
+      <button
+        type="text"
+        class="btn btn-light"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Registros"
+      >
+        <i class="fas fa-book" aria-hidden="true"></i>
+        {{ object.archivedItemsCount }}
+      </button>
+    </a>
+
+    <button
+      type="button"
+      class="btn btn-light"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Autores"
+    >
       <i class="fas fa-user" aria-hidden="true"></i>
       {{ object.archivedItemsCount }}
     </button>
